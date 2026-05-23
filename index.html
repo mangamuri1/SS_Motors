@@ -244,12 +244,7 @@ nav.scrolled{background:rgba(3,13,31,.97);backdrop-filter:blur(20px);border-bott
 .floating-call:hover{transform:scale(1.1)}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 
-/* POPUP */
-.popup-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);z-index:2000;display:flex;align-items:center;justify-content:center;padding:20px}
-.popup-box{background:var(--navy2);border:1px solid var(--glassborder);border-radius:20px;padding:40px;max-width:480px;width:100%;position:relative;max-height:90vh;overflow-y:auto}
-.popup-close{position:absolute;top:16px;right:16px;background:rgba(255,255,255,.08);border:none;color:var(--white);width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center}
-.popup-box h3{font-size:24px;font-weight:700;color:var(--white);margin-bottom:8px}
-.popup-box .sub{font-size:14px;color:var(--textmuted);margin-bottom:24px}
+
 
 /* FOOTER */
 footer{background:rgba(3,13,31,.98);border-top:1px solid var(--glassborder);padding:60px 24px 30px}
@@ -286,7 +281,9 @@ nav{padding:0}
   .floating-card-right{top:-10px;right:0}
   .hero-stats{justify-content:center}
   .why-grid{grid-template-columns:1fr 1fr}
-  .services-grid{grid-template-columns:1fr}
+  .services-grid{flex-direction:column;align-items:center}
+  .service-card{max-width:100%;width:100%}
+  .hero-carousel{max-width:100%}
   .about-grid{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr}
   .testimonials-track{grid-template-columns:1fr}
@@ -318,24 +315,7 @@ nav{padding:0}
 <!-- NOTIFICATION -->
 <div class="notification" id="notification">✓ Request submitted! We'll call you shortly.</div>
 
-<!-- POPUP -->
-<div class="popup-overlay" id="popup" style="display:none">
-  <div class="popup-box">
-    <button class="popup-close" onclick="closePopup()">✕</button>
-    <div class="section-tag">Limited Time Offer</div>
-    <h3>Get <span class="gold-text">Free Finance</span> Consultation</h3>
-    <p class="sub">Fill in your details and our finance expert will call you within 30 minutes!</p>
-    <div class="inp-group"><label class="inp-label">Full Name</label><input class="inp" placeholder="Your full name" id="p-name"></div>
-    <div class="inp-group"><label class="inp-label">Phone Number</label><input class="inp" placeholder="+91 XXXXX XXXXX" id="p-phone"></div>
-    <select class="sel" style="width:100%;margin-bottom:16px" id="p-vehicle">
-      <option value="">Select Vehicle Type</option>
-      <option>Used Bike / Scooter</option>
-      <option>Used Car / SUV</option>
-    </select>
-    <input class="inp" placeholder="Loan Amount Required (₹)" style="margin-bottom:16px" id="p-amount">
-    <button class="submit-btn" onclick="submitPopup()">🚀 Get Free Consultation</button>
-  </div>
-</div>
+
 
 <!-- FLOATING BUTTONS -->
 <a href="https://wa.me/918885367448?text=Hello%2C%20I%20am%20interested%20in%20vehicle%20finance." class="floating-wa" target="_blank" title="WhatsApp Us">
@@ -405,7 +385,7 @@ nav{padding:0}
       </div>
 
       <div class="hero-btns">
-        <button class="btn-primary" onclick="openPopup()">🚀 Apply Now</button>
+        <button class="btn-primary" onclick="scrollToSection('contact')">🚀 Apply Now</button>
         <a href="tel:+918885367448" class="btn-outline">📞 Call Now</a>
         <a href="https://wa.me/918885367448?text=Hello%2C%20I%20am%20interested%20in%20vehicle%20finance." class="btn-wa" target="_blank">💬 WhatsApp Us</a>
       </div>
@@ -627,35 +607,35 @@ nav{padding:0}
       <h3>Used Bike Finance</h3>
       <p>Get your dream pre-owned bike with our easy used bike finance. Low interest rates with quick processing.</p>
       <ul class="service-benefits"><li>Any bike brand accepted</li><li>Minimal documents</li><li>Same day approval</li></ul>
-      <button class="service-btn" onclick="openPopup()">Apply Now →</button>
+      <button class="service-btn" onclick="scrollToSection('contact')">Apply Now →</button>
     </div>
     <div class="service-card fade-up">
       <span class="service-icon">🚗</span>
       <h3>Used Car Finance</h3>
       <p>Drive home your pre-owned car with our flexible used car finance. Competitive rates and quick approvals.</p>
       <ul class="service-benefits"><li>All car brands accepted</li><li>High loan amounts</li><li>Doorstep service</li></ul>
-      <button class="service-btn" onclick="openPopup()">Apply Now →</button>
+      <button class="service-btn" onclick="scrollToSection('contact')">Apply Now →</button>
     </div>
     <div class="service-card fade-up">
       <span class="service-icon">📅</span>
       <h3>Weekly EMI Finance</h3>
       <p>Perfect for daily earners and small business owners. Pay small amounts every week instead of a large monthly sum.</p>
       <ul class="service-benefits"><li>Small weekly payments</li><li>Ideal for daily earners</li><li>Flexible schedules</li></ul>
-      <button class="service-btn" onclick="openPopup()">Apply Now →</button>
+      <button class="service-btn" onclick="scrollToSection('contact')">Apply Now →</button>
     </div>
     <div class="service-card fade-up">
       <span class="service-icon">💳</span>
       <h3>Monthly EMI Finance</h3>
       <p>Traditional monthly EMI plans with affordable installments. Choose tenure from 6 to 36 months.</p>
       <ul class="service-benefits"><li>Salaried & business</li><li>6–36 month tenure</li><li>Auto-debit available</li></ul>
-      <button class="service-btn" onclick="openPopup()">Apply Now →</button>
+      <button class="service-btn" onclick="scrollToSection('contact')">Apply Now →</button>
     </div>
     <div class="service-card fade-up">
       <span class="service-icon">🚀</span>
       <h3>Fast Loan Processing</h3>
       <p>Emergency vehicle finance? We process your loan application within 24 hours with priority handling.</p>
       <ul class="service-benefits"><li>Priority processing</li><li>Same day disbursement</li><li>Minimal verification</li></ul>
-      <button class="service-btn" onclick="openPopup()">Apply Now →</button>
+      <button class="service-btn" onclick="scrollToSection('contact')">Apply Now →</button>
     </div>
   </div>
 </section>
@@ -882,24 +862,11 @@ function toggleFaq(i){
   if(!isOpen){el.classList.add('open');arr.style.transform='rotate(180deg)'}
 }
 
-// POPUP
-function openPopup(){document.getElementById('popup').style.display='flex'}
-function closePopup(){document.getElementById('popup').style.display='none'}
-document.getElementById('popup').addEventListener('click',function(e){if(e.target===this)closePopup()});
-
 function showNotification(msg){
   var n=document.getElementById('notification');
   n.textContent=msg;
   n.classList.add('show');
   setTimeout(()=>n.classList.remove('show'),4000);
-}
-
-function submitPopup(){
-  var name=document.getElementById('p-name').value;
-  var phone=document.getElementById('p-phone').value;
-  if(!name||!phone){showNotification('⚠️ Please fill in name and phone');return}
-  closePopup();
-  showNotification('✓ Request submitted! We\'ll call you shortly.');
 }
 
 function submitForm(){
@@ -945,12 +912,6 @@ function animateOnScroll(){
     if(rect.top<window.innerHeight-60)el.classList.add('visible');
   });
 }
-
-// POPUP TIMER
-setTimeout(()=>{
-  if(!document.querySelector('.popup-overlay[style*="flex"]'))
-    document.getElementById('popup').style.display='flex';
-},12000);
 
 // INIT
 animateOnScroll();
