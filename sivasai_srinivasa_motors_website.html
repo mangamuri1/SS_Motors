@@ -1,0 +1,960 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sivasai Srinivasa Motors - Premium Used Bike & Car Finance in Ongole. Fast approval for pre-owned 2 wheelers and 4 wheelers with flexible weekly and monthly EMI options.">
+<meta name="keywords" content="used vehicle finance Ongole, used bike finance Ongole, used car finance Ongole, used bike finance near me, pre-owned 2 wheeler loan, second hand car finance Andhra Pradesh">
+<title>Sivasai Srinivasa Motors | Premium Used Bike & Car Finance Ongole</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--navy:#030d1f;
+--navy2:#071329;
+--navy3:#0c1e3e;
+--gold:#c9a84c;
+--gold2:#e8c96d;
+--gold3:#f5e09a;
+--silver:#a8b4c8;
+--white:#ffffff;
+--text:#e8edf5;
+--textmuted:#8899b4;
+--glass:rgba(255,255,255,0.04);
+--glassborder:rgba(201,168,76,0.18);
+--glow:rgba(201,168,76,0.12);
+}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--text);font-family:'Outfit',sans-serif;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:'Playfair Display',serif}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:all .3s}
+nav.scrolled{background:rgba(3,13,31,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--glassborder);box-shadow:0 4px 30px rgba(0,0,0,.4)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-img{height:46px;width:auto;object-fit:contain;border-radius:6px;transition:transform .3s ease}
+.logo:hover .logo-img{transform:scale(1.05)}
+.logo-text{display:flex;flex-direction:column}
+.logo-name{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--gold2);line-height:1.1}
+.logo-sub{font-size:10px;color:var(--silver);letter-spacing:1.5px;text-transform:uppercase}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:var(--silver);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s;letter-spacing:.3px}
+.nav-links a:hover{color:var(--gold2)}
+.nav-cta{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);padding:9px 22px;border-radius:6px;font-weight:700;font-size:13px;text-decoration:none;letter-spacing:.5px;transition:transform .2s,box-shadow .2s}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(201,168,76,.35)}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+.nav-hamburger span{width:24px;height:2px;background:var(--gold2);border-radius:2px;transition:all .3s}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(3,13,31,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--glassborder);padding:20px 24px;z-index:999}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:4px}
+.mobile-menu ul li a{display:block;padding:12px 0;color:var(--silver);text-decoration:none;font-size:15px;border-bottom:1px solid rgba(255,255,255,.05)}
+.mobile-menu .m-cta{display:block;margin-top:16px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);padding:12px;border-radius:8px;font-weight:700;text-align:center;text-decoration:none}
+
+/* HERO */
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden;padding-top:68px}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 60% 40%,rgba(201,168,76,.08) 0%,transparent 70%),radial-gradient(ellipse 60% 80% at 10% 80%,rgba(7,19,41,.9) 0%,transparent 60%),linear-gradient(135deg,#030d1f 0%,#071329 40%,#0c1e3e 100%)}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.04) 1px,transparent 1px);background-size:60px 60px}
+.hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:60px 24px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.3);border-radius:40px;padding:6px 16px;font-size:12px;color:var(--gold2);letter-spacing:1px;text-transform:uppercase;margin-bottom:20px}
+.badge-dot{width:6px;height:6px;background:var(--gold2);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
+.hero h1{font-size:clamp(36px,4.5vw,58px);line-height:1.12;font-weight:900;color:var(--white);margin-bottom:20px}
+.hero h1 span{background:linear-gradient(135deg,var(--gold),var(--gold2),var(--gold3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:17px;color:var(--silver);line-height:1.7;margin-bottom:30px;font-weight:400}
+.hero-categories{display:flex;gap:14px;margin-bottom:34px;flex-wrap:wrap}
+.cat-badge{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.03);border:1px solid var(--glassborder);border-radius:10px;padding:8px 14px;font-size:12px;color:var(--text);font-weight:500;transition:all 0.3s ease;cursor:default}
+.cat-badge:hover{background:rgba(201,168,76,0.08);border-color:rgba(201,168,76,0.4);transform:translateY(-2px)}
+.cat-icon{font-size:16px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:48px}
+.btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);padding:14px 28px;border-radius:8px;font-weight:700;font-size:15px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .25s;border:none;cursor:pointer;letter-spacing:.3px}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 35px rgba(201,168,76,.4)}
+.btn-outline{background:transparent;color:var(--white);padding:14px 28px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;border:1.5px solid rgba(255,255,255,.25);transition:all .25s;cursor:pointer}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold2);background:rgba(201,168,76,.08)}
+.btn-wa{background:rgba(37,211,102,.15);color:#25d366;border:1.5px solid rgba(37,211,102,.35);padding:14px 28px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .25s;cursor:pointer}
+.btn-wa:hover{background:rgba(37,211,102,.25);transform:translateY(-2px)}
+.hero-stats{display:flex;gap:32px}
+.stat{border-left:2px solid var(--glassborder);padding-left:20px}
+.stat-num{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:var(--gold2)}
+.stat-label{font-size:12px;color:var(--textmuted);letter-spacing:.5px;text-transform:uppercase}
+
+/* HERO VISUAL REDESIGN WITH CAROUSEL */
+.hero-visual{position:relative;display:flex;align-items:center;justify-content:center;width:100%;min-height:380px}
+.hero-carousel{position:relative;width:100%;max-width:440px;aspect-ratio:1.2;display:flex;align-items:center;justify-content:center}
+.carousel-slide{position:absolute;inset:0;width:100%;height:100%;opacity:0;visibility:hidden;transition:opacity 0.6s ease, visibility 0.6s ease;display:flex;align-items:center;justify-content:center;z-index:1}
+.carousel-slide.active{opacity:1;visibility:visible;z-index:2}
+
+.hero-img-container{position:relative;width:100%;height:100%;border-radius:24px;overflow:hidden;border:1px solid var(--glassborder);box-shadow:0 20px 50px rgba(0,0,0,0.5), 0 0 35px rgba(201,168,76,0.12);transition:all 0.5s ease}
+.hero-img-container:hover{transform:translateY(-5px);box-shadow:0 30px 60px rgba(0,0,0,0.6), 0 0 45px rgba(201,168,76,0.22)}
+.hero-main-img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease}
+.hero-img-container:hover .hero-main-img{transform:scale(1.06)}
+.hero-img-overlay{position:absolute;inset:0;background:linear-gradient(to top, rgba(3,13,31,0.6) 0%, transparent 60%)}
+
+.glass-card-hero{background:rgba(255,255,255,.03);border:1px solid var(--glassborder);border-radius:20px;padding:24px;backdrop-filter:blur(20px);position:relative;overflow:hidden;transition:all 0.3s}
+.glass-card-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold2),transparent)}
+
+/* Floating cards */
+.floating-badge-top{position:absolute;top:-10px;left:15px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);padding:8px 18px;border-radius:40px;font-size:12px;font-weight:700;box-shadow:0 8px 24px rgba(201,168,76,0.4);z-index:5;text-transform:uppercase;letter-spacing:1px;animation:float 3s ease-in-out infinite}
+.floating-card-left{position:absolute;bottom:-15px;left:-15px;width:240px;z-index:4;box-shadow:0 15px 35px rgba(0,0,0,0.4);animation:floatCard1 5s ease-in-out infinite}
+.floating-card-right{position:absolute;top:20px;right:-15px;width:170px;z-index:4;padding:20px;box-shadow:0 15px 35px rgba(0,0,0,0.4);animation:floatCard2 6s ease-in-out infinite}
+
+/* Carousel dots */
+.carousel-dots{position:absolute;bottom:-22px;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:5}
+.dot{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,0.2);border:1px solid var(--glassborder);cursor:pointer;transition:all 0.3s ease}
+.dot.active{background:var(--gold2);box-shadow:0 0 10px var(--gold2);transform:scale(1.25)}
+
+@keyframes floatCard1{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes floatCard2{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+
+.hcard-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.hcard-title{font-size:11px;color:var(--textmuted);letter-spacing:.8px;text-transform:uppercase}
+.hcard-badge{background:rgba(34,197,94,.12);color:#4ade80;font-size:10px;padding:3px 8px;border-radius:20px;border:1px solid rgba(34,197,94,.2)}
+.emi-preview{background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.15);border-radius:12px;padding:16px;margin-bottom:10px}
+.emi-label{font-size:10px;color:var(--textmuted);letter-spacing:.8px;text-transform:uppercase;margin-bottom:4px}
+.emi-amount{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--gold2)}
+.emi-sub{font-size:11px;color:var(--textmuted);margin-top:2px}
+.hcard-features-mini{display:flex;justify-content:space-between;font-size:11px;color:var(--silver);margin-top:10px;border-top:1px solid rgba(255,255,255,0.08);padding-top:10px}
+.rate-preview{text-align:center}
+.rate-amount{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--gold2)}
+.rate-sub{font-size:11px;color:var(--textmuted);margin-top:2px}
+
+/* SECTION COMMON */
+.section{padding:90px 24px;max-width:1200px;margin:0 auto}
+.section-full{padding:90px 0}
+.section-full .section-inner{max-width:1200px;margin:0 auto;padding:0 24px}
+.section-tag{display:inline-block;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);color:var(--gold2);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:16px}
+.section-title{font-size:clamp(28px,3.5vw,42px);font-weight:700;line-height:1.2;margin-bottom:16px}
+.section-sub{color:var(--textmuted);font-size:16px;line-height:1.7;max-width:580px}
+.gold-text{background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--glassborder),transparent);margin:0}
+
+/* WHY US */
+.why-bg{background:linear-gradient(180deg,var(--navy) 0%,var(--navy2) 50%,var(--navy) 100%)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:56px}
+.why-card{background:var(--glass);border:1px solid var(--glassborder);border-radius:16px;padding:28px;position:relative;overflow:hidden;transition:all .3s;cursor:default}
+.why-card:hover{transform:translateY(-4px);border-color:rgba(201,168,76,.4);box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.why-card::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at top left,rgba(201,168,76,.06),transparent 70%);opacity:0;transition:opacity .3s}
+.why-card:hover::before{opacity:1}
+.why-icon{width:52px;height:52px;background:linear-gradient(135deg,rgba(201,168,76,.15),rgba(201,168,76,.05));border:1px solid rgba(201,168,76,.25);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px}
+.why-card h3{font-size:17px;font-weight:600;color:var(--white);margin-bottom:10px}
+.why-card p{font-size:14px;color:var(--textmuted);line-height:1.7}
+
+/* SERVICES */
+.services-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:28px;margin-top:56px}
+.service-card{background:rgba(7,19,41,.8);border:1px solid var(--glassborder);border-radius:18px;padding:32px;position:relative;overflow:hidden;transition:all .3s;display:flex;flex-direction:column;flex:1 1 300px;max-width:380px}
+.service-card:hover{border-color:rgba(201,168,76,.5);box-shadow:0 24px 60px rgba(0,0,0,.35),0 0 0 1px rgba(201,168,76,.1);transform:translateY(-4px)}
+.service-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:opacity .3s}
+.service-card:hover::after{opacity:1}
+.service-icon{font-size:36px;margin-bottom:20px;display:block}
+.service-card h3{font-size:19px;font-weight:700;color:var(--white);margin-bottom:12px}
+.service-card p{font-size:14px;color:var(--textmuted);line-height:1.7;margin-bottom:20px;flex:1}
+.service-benefits{list-style:none;margin-bottom:24px}
+.service-benefits li{font-size:13px;color:var(--silver);padding:4px 0;display:flex;align-items:center;gap:8px}
+.service-benefits li::before{content:'✓';color:var(--gold2);font-weight:700;flex-shrink:0}
+.service-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.3);color:var(--gold2);padding:10px 20px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;transition:all .25s;cursor:pointer;letter-spacing:.3px}
+.service-btn:hover{background:rgba(201,168,76,.2);transform:translateX(2px)}
+
+/* PROCESS */
+.process-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;margin-top:56px;position:relative}
+.process-steps::before{content:'';position:absolute;top:36px;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--glassborder),var(--glassborder),transparent);z-index:0}
+.step{text-align:center;padding:24px 16px;position:relative;z-index:1}
+.step-num{width:72px;height:72px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:24px;font-weight:700;margin:0 auto 18px;box-shadow:0 8px 32px rgba(201,168,76,.3)}
+.step h3{font-size:15px;font-weight:600;color:var(--white);margin-bottom:8px}
+.step p{font-size:13px;color:var(--textmuted);line-height:1.6}
+
+/* TRUST BADGES */
+.trust-strip{background:rgba(201,168,76,.06);border-top:1px solid var(--glassborder);border-bottom:1px solid var(--glassborder)}
+.trust-inner{max-width:1200px;margin:0 auto;padding:28px 24px;display:flex;flex-wrap:wrap;justify-content:center;gap:32px}
+.trust-item{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:var(--silver)}
+.trust-icon{width:36px;height:36px;background:rgba(201,168,76,.12);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px}
+
+/* TESTIMONIALS */
+.testimonials-track{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
+.testimonial{background:var(--glass);border:1px solid var(--glassborder);border-radius:16px;padding:28px;position:relative;transition:all .3s}
+.testimonial:hover{border-color:rgba(201,168,76,.35);transform:translateY(-3px)}
+.quote-mark{font-family:'Playfair Display',serif;font-size:52px;color:rgba(201,168,76,.2);line-height:1;margin-bottom:8px}
+.testimonial p{font-size:14px;color:var(--silver);line-height:1.75;margin-bottom:20px;font-style:italic}
+.testimonial-author{display:flex;align-items:center;gap:12px}
+.author-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold2));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;color:var(--navy);flex-shrink:0}
+.author-name{font-weight:600;font-size:14px;color:var(--white)}
+.author-city{font-size:12px;color:var(--textmuted)}
+.stars{color:var(--gold2);font-size:13px;margin-bottom:4px;letter-spacing:2px}
+
+/* FAQ */
+.faq-list{margin-top:48px;max-width:760px;margin-left:auto;margin-right:auto}
+.faq-item{border-bottom:1px solid rgba(255,255,255,.06);overflow:hidden}
+.faq-q{width:100%;background:none;border:none;color:var(--white);font-size:15px;font-weight:500;padding:20px 0;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Outfit',sans-serif}
+.faq-q:hover{color:var(--gold2)}
+.faq-arrow{font-size:18px;color:var(--gold);transition:transform .3s;flex-shrink:0}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s}
+.faq-a.open{max-height:200px;padding-bottom:18px}
+.faq-a p{font-size:14px;color:var(--textmuted);line-height:1.75}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;margin-top:56px}
+.contact-info{display:flex;flex-direction:column;gap:20px}
+.cinfo-card{background:var(--glass);border:1px solid var(--glassborder);border-radius:14px;padding:22px;display:flex;align-items:flex-start;gap:16px;transition:all .25s}
+.cinfo-card:hover{border-color:rgba(201,168,76,.35)}
+.cinfo-icon{width:44px;height:44px;background:rgba(201,168,76,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.cinfo-label{font-size:11px;color:var(--textmuted);letter-spacing:.8px;text-transform:uppercase;margin-bottom:4px}
+.cinfo-val{font-size:15px;color:var(--white);font-weight:500}
+.cinfo-val a{color:var(--white);text-decoration:none;transition:color .2s}
+.cinfo-val a:hover{color:var(--gold2)}
+.lead-form{background:var(--glass);border:1px solid var(--glassborder);border-radius:20px;padding:36px}
+.lead-form h3{font-size:22px;font-weight:700;color:var(--white);margin-bottom:6px}
+.lead-form .sub{font-size:14px;color:var(--textmuted);margin-bottom:28px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.inp-group{margin-bottom:16px}
+.inp-label{font-size:12px;color:var(--silver);letter-spacing:.4px;margin-bottom:6px;display:block}
+.inp,.sel,.ta{width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:8px;color:var(--white);padding:12px 14px;font-size:14px;font-family:'Outfit',sans-serif;outline:none;transition:border-color .2s;-webkit-appearance:none}
+.inp::placeholder,.ta::placeholder{color:var(--textmuted)}
+.inp:focus,.sel:focus,.ta:focus{border-color:rgba(201,168,76,.5);background:rgba(201,168,76,.04)}
+.ta{height:90px;resize:none}
+.sel{cursor:pointer}
+.sel option{background:var(--navy2);color:var(--white)}
+.submit-btn{width:100%;background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);padding:14px;border-radius:8px;font-weight:700;font-size:15px;border:none;cursor:pointer;letter-spacing:.5px;transition:all .25s;font-family:'Outfit',sans-serif;margin-top:4px}
+.submit-btn:hover{transform:translateY(-2px);box-shadow:0 12px 35px rgba(201,168,76,.4)}
+.map-embed{border-radius:14px;overflow:hidden;border:1px solid var(--glassborder);margin-top:20px}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-top:56px}
+.about-img{background:linear-gradient(135deg,rgba(201,168,76,.1),rgba(201,168,76,.03));border:1px solid var(--glassborder);border-radius:20px;padding:24px;text-align:center}
+.owner-img{max-width:100%;width:100%;height:auto;border-radius:16px;object-fit:cover;border:3px solid var(--gold2);box-shadow:0 8px 24px rgba(201,168,76,0.25);margin:0 auto 20px;display:block;transition:all 0.3s ease}
+.owner-img:hover{transform:scale(1.05);box-shadow:0 12px 30px rgba(201,168,76,0.4)}
+.owner-name{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--white);margin-bottom:6px}
+.owner-title{font-size:13px;color:var(--gold2);letter-spacing:1px;text-transform:uppercase}
+.about-content p{font-size:15px;color:var(--textmuted);line-height:1.8;margin-bottom:16px}
+.mission-box{background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.2);border-radius:12px;padding:20px;margin-top:20px}
+.mission-box h4{font-size:14px;color:var(--gold2);letter-spacing:.8px;text-transform:uppercase;margin-bottom:8px}
+.mission-box p{font-size:14px;color:var(--silver);line-height:1.7;margin:0}
+
+/* COUNTERS */
+.counters-strip{background:rgba(201,168,76,.05);border-top:1px solid var(--glassborder);border-bottom:1px solid var(--glassborder);padding:48px 24px}
+.counters-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.counter-item{text-align:center}
+.counter-num{font-family:'Playfair Display',serif;font-size:40px;font-weight:700;color:var(--gold2)}
+.counter-label{font-size:13px;color:var(--textmuted);letter-spacing:.5px;margin-top:4px}
+
+/* FLOATING BTNS */
+.floating-wa{position:fixed;bottom:28px;right:28px;z-index:900;width:56px;height:56px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(37,211,102,.45);cursor:pointer;text-decoration:none;transition:all .3s;animation:float 3s ease-in-out infinite}
+.floating-wa:hover{transform:scale(1.1);box-shadow:0 12px 40px rgba(37,211,102,.6)}
+.floating-call{position:fixed;bottom:96px;right:28px;z-index:900;width:56px;height:56px;background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(201,168,76,.45);cursor:pointer;text-decoration:none;transition:all .3s}
+.floating-call:hover{transform:scale(1.1)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+
+/* POPUP */
+.popup-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);z-index:2000;display:flex;align-items:center;justify-content:center;padding:20px}
+.popup-box{background:var(--navy2);border:1px solid var(--glassborder);border-radius:20px;padding:40px;max-width:480px;width:100%;position:relative;max-height:90vh;overflow-y:auto}
+.popup-close{position:absolute;top:16px;right:16px;background:rgba(255,255,255,.08);border:none;color:var(--white);width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center}
+.popup-box h3{font-size:24px;font-weight:700;color:var(--white);margin-bottom:8px}
+.popup-box .sub{font-size:14px;color:var(--textmuted);margin-bottom:24px}
+
+/* FOOTER */
+footer{background:rgba(3,13,31,.98);border-top:1px solid var(--glassborder);padding:60px 24px 30px}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand p{font-size:14px;color:var(--textmuted);line-height:1.7;margin:16px 0 20px}
+.footer-social{display:flex;gap:12px}
+.social-btn{width:36px;height:36px;background:rgba(255,255,255,.06);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--silver);text-decoration:none;font-size:16px;transition:all .2s}
+.social-btn:hover{background:rgba(201,168,76,.15);color:var(--gold2)}
+.footer-col h4{font-size:13px;color:var(--gold2);letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:10px}
+.footer-col ul li a{font-size:14px;color:var(--textmuted);text-decoration:none;transition:color .2s}
+.footer-col ul li a:hover{color:var(--gold2)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.05);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:13px;color:var(--textmuted)}
+.footer-seo{max-width:1200px;margin:0 auto;padding-top:24px;border-top:1px solid rgba(255,255,255,.03);font-size:11px;color:rgba(255,255,255,.15);line-height:1.6}
+
+
+nav{padding:0}
+
+/* NOTIFICATION */
+.notification{position:fixed;top:80px;right:24px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);padding:14px 20px;border-radius:10px;font-weight:600;font-size:14px;z-index:3000;transform:translateX(120%);transition:transform .4s;box-shadow:0 8px 24px rgba(201,168,76,.4)}
+.notification.show{transform:translateX(0)}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}
+  .nav-hamburger{display:flex}
+  .hero-content{grid-template-columns:1fr;text-align:center}
+  .hero-visual{display:flex;margin-top:40px;justify-content:center;min-height:300px;width:100%}
+  .hero-carousel{max-width:380px}
+  .floating-card-left{bottom:-10px;left:0}
+  .floating-card-right{top:-10px;right:0}
+  .hero-stats{justify-content:center}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .services-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .testimonials-track{grid-template-columns:1fr}
+  .counters-inner{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .process-steps{grid-template-columns:1fr 1fr}
+  .process-steps::before{display:none}
+  .form-row{grid-template-columns:1fr}
+  .hero-btns{justify-content:center}
+  .stat-num{font-size:24px}
+  .floating-wa{bottom:20px;right:20px;width:52px;height:52px}
+  .floating-call{bottom:84px;right:20px;width:52px;height:52px}
+}
+@media(max-width:480px){
+  .why-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .counters-inner{grid-template-columns:1fr 1fr}
+}
+
+/* ANIMATIONS */
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+.fade-in{opacity:0;transition:opacity .6s ease}
+.fade-in.visible{opacity:1}
+</style>
+</head>
+<body>
+
+<!-- NOTIFICATION -->
+<div class="notification" id="notification">✓ Request submitted! We'll call you shortly.</div>
+
+<!-- POPUP -->
+<div class="popup-overlay" id="popup" style="display:none">
+  <div class="popup-box">
+    <button class="popup-close" onclick="closePopup()">✕</button>
+    <div class="section-tag">Limited Time Offer</div>
+    <h3>Get <span class="gold-text">Free Finance</span> Consultation</h3>
+    <p class="sub">Fill in your details and our finance expert will call you within 30 minutes!</p>
+    <div class="inp-group"><label class="inp-label">Full Name</label><input class="inp" placeholder="Your full name" id="p-name"></div>
+    <div class="inp-group"><label class="inp-label">Phone Number</label><input class="inp" placeholder="+91 XXXXX XXXXX" id="p-phone"></div>
+    <select class="sel" style="width:100%;margin-bottom:16px" id="p-vehicle">
+      <option value="">Select Vehicle Type</option>
+      <option>Used Bike / Scooter</option>
+      <option>Used Car / SUV</option>
+    </select>
+    <input class="inp" placeholder="Loan Amount Required (₹)" style="margin-bottom:16px" id="p-amount">
+    <button class="submit-btn" onclick="submitPopup()">🚀 Get Free Consultation</button>
+  </div>
+</div>
+
+<!-- FLOATING BUTTONS -->
+<a href="https://wa.me/918885367448?text=Hello%2C%20I%20am%20interested%20in%20vehicle%20finance." class="floating-wa" target="_blank" title="WhatsApp Us">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<a href="tel:+918885367448" class="floating-call" title="Call Now">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="#030d1f"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+</a>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo" onclick="scrollToSection('home')">
+      <img src="Logo.png" alt="Sivasai Srinivasa Motors Logo" class="logo-img">
+      <div class="logo-text">
+        <span class="logo-name">Sivasai Srinivasa</span>
+        <span class="logo-sub">Vehicle Finance</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home" onclick="scrollToSection('home');return false">Home</a></li>
+      <li><a href="#about" onclick="scrollToSection('about');return false">About Us</a></li>
+      <li><a href="#services" onclick="scrollToSection('services');return false">Services</a></li>
+      <li><a href="#contact" onclick="scrollToSection('contact');return false">Contact</a></li>
+    </ul>
+    <a href="tel:+918885367448" class="nav-cta">📞 Call Now</a>
+    <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#home" onclick="scrollToSection('home');toggleMenu();return false">🏠 Home</a></li>
+    <li><a href="#about" onclick="scrollToSection('about');toggleMenu();return false">👤 About Us</a></li>
+    <li><a href="#services" onclick="scrollToSection('services');toggleMenu();return false">🚗 Services</a></li>
+    <li><a href="#contact" onclick="scrollToSection('contact');toggleMenu();return false">📍 Contact</a></li>
+  </ul>
+  <a href="tel:+918885367448" class="m-cta">📞 Call +91 8885367448</a>
+</div>
+
+<!-- ===== HOME PAGE ===== -->
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-left fade-up visible">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        ✦ Premium Used Bike & Car Finance
+      </div>
+      <h1>Unlock the Best Rates on <span>Used Bike & Car</span> Finance</h1>
+      <p class="hero-sub">Get hassle-free loan approvals for premium used bikes, scooters, and pre-owned cars in Ongole. Flexible payment options, lowest interest rates, and quick 24-hour disbursal.</p>
+      
+      <div class="hero-categories">
+        <div class="cat-badge">
+          <span class="cat-icon">🏍️</span>
+          <span>Used Bike & Scooter Loans</span>
+        </div>
+        <div class="cat-badge">
+          <span class="cat-icon">🚗</span>
+          <span>Used Car & SUV Finance</span>
+        </div>
+      </div>
+
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="openPopup()">🚀 Apply Now</button>
+        <a href="tel:+918885367448" class="btn-outline">📞 Call Now</a>
+        <a href="https://wa.me/918885367448?text=Hello%2C%20I%20am%20interested%20in%20vehicle%20finance." class="btn-wa" target="_blank">💬 WhatsApp Us</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num" data-count="1500">0</div><div class="stat-label">Vehicles Financed</div></div>
+        <div class="stat"><div class="stat-num" data-count="99">0</div><div class="stat-label">% Approval Rate</div></div>
+        <div class="stat"><div class="stat-num" data-count="24">0</div><div class="stat-label">Hr Disbursal</div></div>
+      </div>
+    </div>
+    <div class="hero-visual fade-in visible">
+      <div class="hero-carousel" id="heroCarousel">
+        
+        <!-- Slide 1: 2 Wheeler Finance -->
+        <div class="carousel-slide active" data-index="0">
+          <div class="hero-img-container">
+            <img src="used_bike_finance.png" alt="Used Two Wheeler Finance" class="hero-main-img">
+            <div class="hero-img-overlay"></div>
+          </div>
+          <div class="floating-badge-top">✦ Used 2-Wheeler Loans</div>
+          <div class="glass-card-hero floating-card-left">
+            <div class="hcard-header">
+              <span class="hcard-title">Used Bike Finance</span>
+              <span class="hcard-badge">● Approved</span>
+            </div>
+            <div class="emi-preview">
+              <div class="emi-label">Starting EMI</div>
+              <div class="emi-amount">₹1,999<span style="font-size:14px;color:var(--textmuted)">/mo*</span></div>
+            </div>
+            <div class="hcard-features-mini">
+              <span>🏍️ Used Bikes</span> · <span>🛵 Scooters</span> · <span>⚡ Fast Approval</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Slide 2: 4 Wheeler Finance -->
+        <div class="carousel-slide" data-index="1">
+          <div class="hero-img-container">
+            <img src="used_car_finance.png" alt="Used Four Wheeler Finance" class="hero-main-img">
+            <div class="hero-img-overlay"></div>
+          </div>
+          <div class="floating-badge-top">✦ Used 4-Wheeler Loans</div>
+          <div class="glass-card-hero floating-card-left">
+            <div class="hcard-header">
+              <span class="hcard-title">Used Car Finance</span>
+              <span class="hcard-badge">● Approved</span>
+            </div>
+            <div class="emi-preview">
+              <div class="emi-label">Starting EMI</div>
+              <div class="emi-amount">₹5,999<span style="font-size:14px;color:var(--textmuted)">/mo*</span></div>
+            </div>
+            <div class="hcard-features-mini">
+              <span>🚗 Pre-Owned Cars</span> · <span>🚙 SUVs</span> · <span>⚡ 24h Approval</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3: Weekly Finance -->
+        <div class="carousel-slide" data-index="2">
+          <div class="hero-img-container">
+            <img src="weekly_finance.png" alt="Weekly EMI Finance" class="hero-main-img">
+            <div class="hero-img-overlay"></div>
+          </div>
+          <div class="floating-badge-top">✦ Weekly Payment</div>
+          <div class="glass-card-hero floating-card-left">
+            <div class="hcard-header">
+              <span class="hcard-title">Weekly EMI Finance</span>
+              <span class="hcard-badge">● Flexible</span>
+            </div>
+            <div class="emi-preview">
+              <div class="emi-label">Weekly Installment</div>
+              <div class="emi-amount">₹499<span style="font-size:14px;color:var(--textmuted)">/wk*</span></div>
+            </div>
+            <div class="hcard-features-mini">
+              <span>📅 Small Payments</span> · <span>💼 Daily Earners</span> · <span>⚡ Low paperwork</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4: Monthly Finance -->
+        <div class="carousel-slide" data-index="3">
+          <div class="hero-img-container">
+            <img src="monthly_finance.png" alt="Monthly EMI Finance" class="hero-main-img">
+            <div class="hero-img-overlay"></div>
+          </div>
+          <div class="floating-badge-top">✦ Monthly Payment</div>
+          <div class="glass-card-hero floating-card-left">
+            <div class="hcard-header">
+              <span class="hcard-title">Monthly EMI Finance</span>
+              <span class="hcard-badge">● Standard</span>
+            </div>
+            <div class="emi-preview">
+              <div class="emi-label">Monthly Installment</div>
+              <div class="emi-amount">₹2,499<span style="font-size:14px;color:var(--textmuted)">/mo*</span></div>
+            </div>
+            <div class="hcard-features-mini">
+              <span>💳 Salaried & Business</span> · <span>📅 36m Tenure</span> · <span>⚡ Auto debit</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Rate Badge (Persistent on all slides) -->
+        <div class="glass-card-hero floating-card-right">
+          <div class="hcard-header">
+            <span class="hcard-title">Interest Rate</span>
+          </div>
+          <div class="rate-preview">
+            <div class="rate-amount">8.5%<span style="font-size:12px;color:var(--gold2)"> p.a.</span></div>
+            <div class="rate-sub">Lowest in Ongole</div>
+          </div>
+        </div>
+
+        <!-- Carousel Indicators -->
+        <div class="carousel-dots">
+          <span class="dot active" onclick="setSlide(0)"></span>
+          <span class="dot" onclick="setSlide(1)"></span>
+          <span class="dot" onclick="setSlide(2)"></span>
+          <span class="dot" onclick="setSlide(3)"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-item"><div class="trust-icon">⚡</div>Fast Approval</div>
+    <div class="trust-item"><div class="trust-icon">🔒</div>Secure Process</div>
+    <div class="trust-item"><div class="trust-icon">🤝</div>Trusted Finance Partner</div>
+    <div class="trust-item"><div class="trust-icon">📊</div>Flexible EMI Options</div>
+    <div class="trust-item"><div class="trust-icon">📋</div>Easy Documentation</div>
+    <div class="trust-item"><div class="trust-icon">🏆</div>Best Interest Rates</div>
+  </div>
+</div>
+
+<!-- WHY CHOOSE US -->
+<div class="why-bg section-full">
+  <section class="section">
+    <div class="section-tag">Why Choose Us</div>
+    <h2 class="section-title">The <span class="gold-text">Sivasai Advantage</span></h2>
+    <p class="section-sub">We make vehicle financing simple, fast, and affordable for everyone in Ongole and surrounding areas.</p>
+    <div class="why-grid">
+      <div class="why-card fade-up"><div class="why-icon">⚡</div><h3>Instant Approval</h3><p>Get your finance approval within hours. Our streamlined process ensures you get the funds without long waiting periods.</p></div>
+      <div class="why-card fade-up"><div class="why-icon">📋</div><h3>Minimal Documentation</h3><p>We accept minimal paperwork. Basic ID and income proof is all you need to start your vehicle finance journey.</p></div>
+      <div class="why-card fade-up"><div class="why-icon">💰</div><h3>Lowest Interest Rates</h3><p>Competitive and transparent interest rates with no hidden charges. We ensure you get the best deal possible.</p></div>
+      <div class="why-card fade-up"><div class="why-icon">📅</div><h3>Flexible EMI Options</h3><p>Choose between weekly or monthly EMI plans that fit your income cycle and budget perfectly.</p></div>
+      <div class="why-card fade-up"><div class="why-icon">🤝</div><h3>Personal Service</h3><p>Our dedicated team provides personalized finance solutions tailored to your specific needs and financial situation.</p></div>
+      <div class="why-card fade-up"><div class="why-icon">🏍️</div><h3>All Vehicles Covered</h3><p>From new bikes to used 4 wheelers — we finance all types of vehicles with equal expertise and care.</p></div>
+    </div>
+  </section>
+</div>
+
+<!-- COUNTERS -->
+<div class="counters-strip">
+  <div class="counters-inner">
+    <div class="counter-item"><div class="counter-num" data-count="500">0+</div><div class="counter-label">Happy Customers</div></div>
+    <div class="counter-item"><div class="counter-num" data-count="98">0%</div><div class="counter-label">Approval Rate</div></div>
+    <div class="counter-item"><div class="counter-num" data-count="5">0+</div><div class="counter-label">Years Experience</div></div>
+    <div class="counter-item"><div class="counter-num" data-count="24">0 Hrs</div><div class="counter-label">Fast Disbursal</div></div>
+  </div>
+</div>
+
+<!-- ABOUT SECTION -->
+
+<section class="section" id="about">
+  <div class="section-tag">About Us</div>
+  <h2 class="section-title">Our <span class="gold-text">Story & Mission</span></h2>
+  <div class="about-grid">
+    <div>
+      <div class="about-img">
+        <img src="Owner.png" alt="Alla Halani Kumar - Owner of Sivasai Srinivasa Motors" class="owner-img">
+        <div class="owner-name">Alla Halani Kumar</div>
+        <div class="owner-title" style="margin-bottom:16px">Founder & Owner</div>
+        <p style="font-size:13px;color:var(--textmuted);line-height:1.7">With years of experience in vehicle finance, Alla Halani Kumar has helped hundreds of families in Ongole and surrounding areas own their dream vehicles.</p>
+        <div style="display:flex;gap:12px;justify-content:center;margin-top:20px">
+          <a href="tel:+918885367448" style="flex:1;text-align:center;padding:10px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.3);border-radius:8px;color:var(--gold2);text-decoration:none;font-size:13px;font-weight:600">📞 Call</a>
+          <a href="https://wa.me/918885367448" target="_blank" style="flex:1;text-align:center;padding:10px;background:rgba(37,211,102,.1);border:1px solid rgba(37,211,102,.3);border-radius:8px;color:#25d366;text-decoration:none;font-size:13px;font-weight:600">💬 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="about-content">
+      <p>Sivasai Srinivasa Motors was established with a clear vision: to make vehicle ownership accessible to every family in Ongole, Andhra Pradesh. Founded by Alla Halani Kumar, we have been serving the community with transparent, affordable, and fast vehicle finance solutions.</p>
+      <p>We understand that owning a vehicle is not a luxury — it's a necessity. Whether it's a bike for a daily commute, a scooter for college students, or a car for the family, we ensure that financial constraints never stand between you and your dream vehicle.</p>
+      <p>Located in the heart of Ongole at Ratnam Diamond Towers, Kurnool Road, we serve customers from Ongole, Chirala, Markapur, Kandukur, Nellore, and across Andhra Pradesh.</p>
+      <div class="mission-box">
+        <h4>Our Mission</h4>
+        <p>To provide fast, transparent, and affordable vehicle finance to every individual and family — empowering them to own vehicles that transform their daily lives and livelihoods.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px">
+        <div style="background:var(--glass);border:1px solid var(--glassborder);border-radius:12px;padding:18px;text-align:center">
+          <div style="font-size:28px;font-weight:700;color:var(--gold2);font-family:'Playfair Display',serif">1500+</div>
+          <div style="font-size:12px;color:var(--textmuted);margin-top:4px">Vehicles Financed</div>
+        </div>
+        <div style="background:var(--glass);border:1px solid var(--glassborder);border-radius:12px;padding:18px;text-align:center">
+          <div style="font-size:28px;font-weight:700;color:var(--gold2);font-family:'Playfair Display',serif">5+</div>
+          <div style="font-size:12px;color:var(--textmuted);margin-top:4px">Years of Trust</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trust-strip" style="margin-top:60px;border-radius:16px;border:1px solid var(--glassborder)">
+    <div class="trust-inner">
+      <div class="trust-item"><div class="trust-icon">⚡</div>Fast Approval</div>
+      <div class="trust-item"><div class="trust-icon">🔒</div>Secure & Trusted</div>
+      <div class="trust-item"><div class="trust-icon">💰</div>Best Rates</div>
+      <div class="trust-item"><div class="trust-icon">📋</div>Easy Docs</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="section-tag">Our Services</div>
+  <h2 class="section-title">Finance Solutions for <span class="gold-text">Used Vehicles</span></h2>
+  <p class="section-sub">We offer tailored, transparent, and quick finance plans exclusively for pre-owned bikes, scooters, and cars.</p>
+  <div class="services-grid">
+    <div class="service-card fade-up">
+      <span class="service-icon">🏍️</span>
+      <h3>Used Bike Finance</h3>
+      <p>Get your dream pre-owned bike with our easy used bike finance. Low interest rates with quick processing.</p>
+      <ul class="service-benefits"><li>Any bike brand accepted</li><li>Minimal documents</li><li>Same day approval</li></ul>
+      <button class="service-btn" onclick="openPopup()">Apply Now →</button>
+    </div>
+    <div class="service-card fade-up">
+      <span class="service-icon">🚗</span>
+      <h3>Used Car Finance</h3>
+      <p>Drive home your pre-owned car with our flexible used car finance. Competitive rates and quick approvals.</p>
+      <ul class="service-benefits"><li>All car brands accepted</li><li>High loan amounts</li><li>Doorstep service</li></ul>
+      <button class="service-btn" onclick="openPopup()">Apply Now →</button>
+    </div>
+    <div class="service-card fade-up">
+      <span class="service-icon">📅</span>
+      <h3>Weekly EMI Finance</h3>
+      <p>Perfect for daily earners and small business owners. Pay small amounts every week instead of a large monthly sum.</p>
+      <ul class="service-benefits"><li>Small weekly payments</li><li>Ideal for daily earners</li><li>Flexible schedules</li></ul>
+      <button class="service-btn" onclick="openPopup()">Apply Now →</button>
+    </div>
+    <div class="service-card fade-up">
+      <span class="service-icon">💳</span>
+      <h3>Monthly EMI Finance</h3>
+      <p>Traditional monthly EMI plans with affordable installments. Choose tenure from 6 to 36 months.</p>
+      <ul class="service-benefits"><li>Salaried & business</li><li>6–36 month tenure</li><li>Auto-debit available</li></ul>
+      <button class="service-btn" onclick="openPopup()">Apply Now →</button>
+    </div>
+    <div class="service-card fade-up">
+      <span class="service-icon">🚀</span>
+      <h3>Fast Loan Processing</h3>
+      <p>Emergency vehicle finance? We process your loan application within 24 hours with priority handling.</p>
+      <ul class="service-benefits"><li>Priority processing</li><li>Same day disbursement</li><li>Minimal verification</li></ul>
+      <button class="service-btn" onclick="openPopup()">Apply Now →</button>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- PROCESS -->
+<section class="section">
+  <div class="section-tag">How It Works</div>
+  <h2 class="section-title">Simple <span class="gold-text">4-Step</span> Process</h2>
+  <p class="section-sub">Getting your vehicle financed has never been easier. We've simplified everything for you.</p>
+  <div class="process-steps">
+    <div class="step fade-up"><div class="step-num">1</div><h3>Apply Online</h3><p>Fill in your basic details through our form or WhatsApp us your requirements.</p></div>
+    <div class="step fade-up"><div class="step-num">2</div><h3>Document Review</h3><p>Submit minimal documents. Our team verifies them quickly and securely.</p></div>
+    <div class="step fade-up"><div class="step-num">3</div><h3>Get Approved</h3><p>Receive your approval notification within hours of document submission.</p></div>
+    <div class="step fade-up"><div class="step-num">4</div><h3>Drive Home</h3><p>Funds disbursed directly. Pick up your vehicle and start your journey!</p></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<div class="why-bg section-full">
+  <section class="section">
+    <div class="section-tag">Testimonials</div>
+    <h2 class="section-title">What Our <span class="gold-text">Customers Say</span></h2>
+    <p class="section-sub">Real experiences from people across Ongole who trusted us with their vehicle finance.</p>
+    <div class="testimonials-track">
+      <div class="testimonial fade-up">
+        <div class="quote-mark">"</div>
+        <div class="stars">★★★★★</div>
+        <p>I got my bike finance approved within the same day! Alla sir and his team made the entire process so smooth. Highly recommend to anyone in Ongole.</p>
+        <div class="testimonial-author"><div class="author-avatar">RK</div><div><div class="author-name">Ravi Kumar</div><div class="author-city">Ongole, AP</div></div></div>
+      </div>
+      <div class="testimonial fade-up">
+        <div class="quote-mark">"</div>
+        <div class="stars">★★★★★</div>
+        <p>Weekly EMI option is a lifesaver for me as a vegetable vendor. Small weekly payments don't burden my daily earnings. Best finance company in town.</p>
+        <div class="testimonial-author"><div class="author-avatar">SN</div><div><div class="author-name">Srinivas Naidu</div><div class="author-city">Chirala, AP</div></div></div>
+      </div>
+      <div class="testimonial fade-up">
+        <div class="quote-mark">"</div>
+        <div class="stars">★★★★★</div>
+        <p>Bought my second-hand car through Sivasai Motors finance. The interest rate was the lowest I found anywhere. Very transparent, no hidden fees.</p>
+        <div class="testimonial-author"><div class="author-avatar">PL</div><div><div class="author-name">Padmavathi Lakshmi</div><div class="author-city">Ongole, AP</div></div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="section-tag">FAQ</div>
+  <h2 class="section-title" style="text-align:center">Frequently Asked <span class="gold-text">Questions</span></h2>
+  <div class="faq-list" id="faqList">
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(0)">What documents are needed for bike finance? <span class="faq-arrow" id="faq-arrow-0">▼</span></button><div class="faq-a" id="faq-0"><p>Basic documents include: Aadhaar Card, PAN Card, recent passport-size photos, address proof, and income proof (salary slip or bank statement). We keep documentation minimal for your convenience.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(1)">How fast is the loan approval process? <span class="faq-arrow" id="faq-arrow-1">▼</span></button><div class="faq-a" id="faq-1"><p>We process most applications within 2–4 hours after document submission. In urgent cases, same-day approval and disbursement is possible. Call us at +91 8885367448 for priority processing.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(2)">Can I get finance for a used bike or car? <span class="faq-arrow" id="faq-arrow-2">▼</span></button><div class="faq-a" id="faq-2"><p>Absolutely! We specialize in used vehicle finance. Both used bikes and used cars are eligible. The vehicle should be in good running condition and have proper registration documents.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(3)">What is the minimum and maximum loan amount? <span class="faq-arrow" id="faq-arrow-3">▼</span></button><div class="faq-a" id="faq-3"><p>Minimum loan amount is ₹15,000 (for used bikes) and maximum goes up to ₹15,00,000 for 4 wheelers. The exact amount depends on your eligibility and vehicle value.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(4)">What is the Weekly EMI option? <span class="faq-arrow" id="faq-arrow-4">▼</span></button><div class="faq-a" id="faq-4"><p>Weekly EMI allows you to pay small installments every week instead of one large monthly payment. This is ideal for daily earners, auto drivers, shop owners, and small business people who earn income daily or weekly.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(5)">What interest rates do you offer? <span class="faq-arrow" id="faq-arrow-5">▼</span></button><div class="faq-a" id="faq-5"><p>Our interest rates start from as low as 14% per annum for eligible customers. Rates vary based on loan amount, tenure, vehicle type, and customer profile. Contact us for a personalized quote.</p></div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="section-tag">Get In Touch</div>
+  <h2 class="section-title">Contact <span class="gold-text">Sivasai Srinivasa Motors</span></h2>
+  <p class="section-sub" style="margin-bottom:40px">Visit our office, call us, or send a WhatsApp message. We're always ready to help you with your vehicle finance needs.</p>
+  
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="cinfo-card"><div class="cinfo-icon">📍</div><div><div class="cinfo-label">Office Address</div><div class="cinfo-val">Ratnam Diamond Towers,<br>Kurnool Road, Ongole,<br>Andhra Pradesh, India</div></div></div>
+      <div class="cinfo-card"><div class="cinfo-icon">📞</div><div><div class="cinfo-label">Phone Number</div><div class="cinfo-val"><a href="tel:+918885367448">+91 8885367448</a></div></div></div>
+      <div class="cinfo-card"><div class="cinfo-icon">💬</div><div><div class="cinfo-label">WhatsApp</div><div class="cinfo-val"><a href="https://wa.me/918885367448" target="_blank">Chat on WhatsApp</a></div></div></div>
+      <div class="cinfo-card"><div class="cinfo-icon">⏰</div><div><div class="cinfo-label">Business Hours</div><div class="cinfo-val">Mon – Sat: 9:00 AM – 7:00 PM<br>Sunday: 10:00 AM – 4:00 PM</div></div></div>
+      <div class="cinfo-card"><div class="cinfo-icon">👤</div><div><div class="cinfo-label">Owner</div><div class="cinfo-val">Alla Halani Kumar</div></div></div>
+      <div style="display:flex;gap:12px;margin-top:8px">
+        <a href="tel:+918885367448" class="btn-primary" style="flex:1;justify-content:center;font-size:14px">📞 Call Now</a>
+        <a href="https://wa.me/918885367448" target="_blank" class="btn-wa" style="flex:1;justify-content:center;font-size:14px">💬 WhatsApp</a>
+      </div>
+      <div class="map-embed">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30776.39!2d80.0435!3d15.5057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a1f8b4f4a0001%3A0x1234567890abcdef!2sRatnam%20Diamond%20Towers%2C%20Kurnool%20Road%2C%20Ongole%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1699999999999!5m2!1sen!2sin" width="100%" height="220" style="border:0;display:block" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Sivasai Srinivasa Motors Location"></iframe>
+      </div>
+    </div>
+    <div class="lead-form">
+      <h3>Apply for Finance</h3>
+      <p class="sub">Fill in your details and we'll get back to you within 30 minutes!</p>
+      <div class="form-row">
+        <div class="inp-group"><label class="inp-label">Full Name *</label><input class="inp" placeholder="Your name" id="c-name"></div>
+        <div class="inp-group"><label class="inp-label">Phone Number *</label><input class="inp" placeholder="+91 XXXXXXXXXX" id="c-phone"></div>
+      </div>
+      <div class="form-row">
+        <div class="inp-group"><label class="inp-label">Vehicle Type *</label>
+          <select class="sel" id="c-vehicle">
+            <option value="">Select vehicle type</option>
+            <option>Used Bike / Scooter</option>
+            <option>Used Car / SUV</option>
+          </select>
+        </div>
+        <div class="inp-group"><label class="inp-label">Loan Amount (₹) *</label><input class="inp" placeholder="e.g. 80000" id="c-amount"></div>
+      </div>
+      <div class="form-row">
+        <div class="inp-group"><label class="inp-label">EMI Preference</label>
+          <select class="sel" id="c-emi">
+            <option>Monthly EMI</option>
+            <option>Weekly EMI</option>
+          </select>
+        </div>
+        <div class="inp-group"><label class="inp-label">City</label><input class="inp" placeholder="Your city" id="c-city"></div>
+      </div>
+      <div class="inp-group"><label class="inp-label">Message</label><textarea class="ta" placeholder="Any specific requirements or questions..." id="c-msg"></textarea></div>
+      <button class="submit-btn" onclick="submitForm()">🚀 Submit Application</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER (shown on all pages) -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <img src="Logo.png" alt="Sivasai Srinivasa Motors Logo" class="logo-img">
+          <div class="logo-text">
+            <span class="logo-name">Sivasai Srinivasa Motors</span>
+            <span class="logo-sub">Vehicle Finance</span>
+          </div>
+        </div>
+        <p>Ongole's most trusted vehicle finance company. Fast, transparent, and affordable finance for pre-owned bikes, scooters, and cars since 2019.</p>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <a href="tel:+918885367448" style="color:var(--gold2);text-decoration:none;font-size:15px;font-weight:600">📞 +91 8885367448</a>
+          <a href="https://wa.me/918885367448" style="color:#25d366;text-decoration:none;font-size:14px">💬 WhatsApp Us</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home" onclick="scrollToSection('home');return false">Home</a></li>
+          <li><a href="#about" onclick="scrollToSection('about');return false">About Us</a></li>
+          <li><a href="#services" onclick="scrollToSection('services');return false">Services</a></li>
+          <li><a href="#contact" onclick="scrollToSection('contact');return false">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#services" onclick="scrollToSection('services');return false">Used Bike Finance</a></li>
+          <li><a href="#services" onclick="scrollToSection('services');return false">Used Car Finance</a></li>
+          <li><a href="#services" onclick="scrollToSection('services');return false">Weekly EMI Finance</a></li>
+          <li><a href="#services" onclick="scrollToSection('services');return false">Monthly EMI Finance</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://maps.google.com/?q=Ratnam+Diamond+Towers,+Kurnool+Road,+Ongole,+Andhra+Pradesh" target="_blank">Ratnam Diamond Towers</a></li>
+          <li><a href="https://maps.google.com/?q=Ratnam+Diamond+Towers,+Kurnool+Road,+Ongole,+Andhra+Pradesh" target="_blank">Kurnool Road, Ongole</a></li>
+          <li><a href="https://maps.google.com/?q=Ratnam+Diamond+Towers,+Kurnool+Road,+Ongole,+Andhra+Pradesh" target="_blank">Andhra Pradesh, India</a></li>
+          <li><a href="tel:+918885367448">+91 8885367448</a></li>
+          <li><a href="https://wa.me/918885367448" target="_blank">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Sivasai Srinivasa Motors. All rights reserved. | Alla Halani Kumar</p>
+      <p>Vehicle Finance in Ongole, Andhra Pradesh</p>
+    </div>
+    <div class="footer-seo">Keywords: Vehicle finance in Ongole | Bike finance Ongole | Car finance Ongole | Used bike finance near me | 2 wheeler loan Ongole | 4 wheeler finance Andhra Pradesh | Weekly EMI finance Ongole | Monthly EMI bike loan | Fast vehicle loan Ongole | Sivasai Srinivasa Motors</div>
+  </div>
+</footer>
+
+<script>
+// MOBILE MENU
+function toggleMenu(){
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+// HERO CAROUSEL
+let currentSlide = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+const dots = document.querySelectorAll('.dot');
+let carouselInterval = setInterval(nextSlide, 4500);
+
+function showSlide(index) {
+  if(!slides.length || !dots.length) return;
+  slides.forEach((s, i) => {
+    s.classList.toggle('active', i === index);
+    dots[i].classList.toggle('active', i === index);
+  });
+  currentSlide = index;
+}
+
+function nextSlide() {
+  let next = (currentSlide + 1) % slides.length;
+  showSlide(next);
+}
+
+function setSlide(index) {
+  clearInterval(carouselInterval);
+  showSlide(index);
+  carouselInterval = setInterval(nextSlide, 4500);
+}
+
+
+// SCROLL NAV
+window.addEventListener('scroll',()=>{
+  if(window.scrollY>80) document.getElementById('navbar').classList.add('scrolled');
+  else document.getElementById('navbar').classList.remove('scrolled');
+  animateOnScroll();
+  animateCounters();
+});
+
+// SCROLL TO SECTION
+function scrollToSection(id){
+  const el=document.getElementById(id);
+  if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+// FAQ
+function toggleFaq(i){
+  var el=document.getElementById('faq-'+i);
+  var arr=document.getElementById('faq-arrow-'+i);
+  var isOpen=el.classList.contains('open');
+  document.querySelectorAll('.faq-a').forEach(a=>a.classList.remove('open'));
+  document.querySelectorAll('.faq-arrow').forEach(a=>a.style.transform='');
+  if(!isOpen){el.classList.add('open');arr.style.transform='rotate(180deg)'}
+}
+
+// POPUP
+function openPopup(){document.getElementById('popup').style.display='flex'}
+function closePopup(){document.getElementById('popup').style.display='none'}
+document.getElementById('popup').addEventListener('click',function(e){if(e.target===this)closePopup()});
+
+function showNotification(msg){
+  var n=document.getElementById('notification');
+  n.textContent=msg;
+  n.classList.add('show');
+  setTimeout(()=>n.classList.remove('show'),4000);
+}
+
+function submitPopup(){
+  var name=document.getElementById('p-name').value;
+  var phone=document.getElementById('p-phone').value;
+  if(!name||!phone){showNotification('⚠️ Please fill in name and phone');return}
+  closePopup();
+  showNotification('✓ Request submitted! We\'ll call you shortly.');
+}
+
+function submitForm(){
+  var name=document.getElementById('c-name').value;
+  var phone=document.getElementById('c-phone').value;
+  if(!name||!phone){showNotification('⚠️ Please fill in required fields');return}
+  showNotification('✓ Application submitted! Expect a call within 30 minutes.');
+}
+
+// COUNTER ANIMATION
+var countersAnimated=false;
+function animateCounters(){
+  if(countersAnimated)return;
+  var els=document.querySelectorAll('.counter-num,.stat-num[data-count]');
+  if(!els.length)return;
+  var anyVisible=false;
+  els.forEach(el=>{
+    var rect=el.getBoundingClientRect();
+    if(rect.top<window.innerHeight)anyVisible=true;
+  });
+  if(!anyVisible)return;
+  countersAnimated=true;
+  document.querySelectorAll('[data-count]').forEach(el=>{
+    var target=+el.getAttribute('data-count');
+    var orig=el.textContent;
+    var suffix=orig.replace(/[0-9]/g,'');
+    var start=0;var dur=1800;var startTime=null;
+    function step(ts){
+      if(!startTime)startTime=ts;
+      var progress=Math.min((ts-startTime)/dur,1);
+      var val=Math.round(progress*target);
+      el.textContent=val+suffix;
+      if(progress<1)requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  });
+}
+
+// SCROLL ANIMATIONS
+function animateOnScroll(){
+  document.querySelectorAll('.fade-up,.fade-in').forEach(el=>{
+    var rect=el.getBoundingClientRect();
+    if(rect.top<window.innerHeight-60)el.classList.add('visible');
+  });
+}
+
+// POPUP TIMER
+setTimeout(()=>{
+  if(!document.querySelector('.popup-overlay[style*="flex"]'))
+    document.getElementById('popup').style.display='flex';
+},12000);
+
+// INIT
+animateOnScroll();
+setTimeout(animateCounters,500);
+</script>
+</body>
+</html>
